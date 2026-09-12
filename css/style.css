@@ -107,71 +107,73 @@ a:hover{ color: var(--vert); }
 
 /* ---------------- hero ---------------- */
 .hero{
-  background: var(--white);
-  padding: 5rem 1.5rem 3rem;
+  background: var(--violet);
+  padding: 4.5rem 1.5rem 3.5rem;
   text-align: center;
-  border-bottom: 1px solid var(--line-light);
+  color: var(--white);
 }
 .hero-inner{ max-width: 900px; margin: 0 auto; }
 .hero-logo-erer{
   height: 74px; width: auto; display: block; margin: 0 auto 2.2rem;
+  filter: brightness(0) invert(1);
 }
 .hero-kicker{
-  font-family: var(--body); font-style: italic; color: var(--vert);
+  font-family: var(--body); font-style: italic; color: var(--mauve);
   font-size: 1rem; margin: 0 0 1rem; letter-spacing: .02em;
 }
 .hero h1{
   font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.04;
-  color: var(--violet); margin-bottom: 1.4rem;
+  color: var(--white); margin-bottom: 1.4rem;
 }
 .hero-tagline{
-  font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--ink-soft);
+  font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,.82);
   max-width: 54ch; margin: 0 auto 2.4rem;
 }
 .hero-date{
   font-family: var(--display); font-size: 1.5rem; color: var(--vert);
   margin: 0 0 .4rem; font-weight: 600;
 }
-.hero-place{ font-size: .98rem; color: var(--ink-soft); margin: 0 0 2.4rem; }
+.hero-place{ font-size: .98rem; color: rgba(255,255,255,.72); margin: 0 0 2.4rem; }
 
 .hero-actions{ display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.6rem; }
 
 /* bandeau de financement ARS */
 .funding-banner{
-  display: inline-flex; align-items: center; gap: 1.6rem;
-  background: var(--white); border: 1.5px solid var(--line-light);
-  border-radius: 14px; padding: 1.1rem 2.2rem;
-  text-decoration: none; margin-bottom: 3.5rem;
-  box-shadow: 0 10px 30px rgba(39,5,90,.1);
-  transition: transform .18s, box-shadow .22s, border-color .22s;
+  display: inline-flex; align-items: center; gap: 1.4rem;
+  background: var(--white); border: none;
+  border-radius: 14px; padding: .9rem 1.8rem;
+  text-decoration: none; margin-bottom: 2.6rem;
+  box-shadow: 0 12px 34px rgba(0,0,0,.22);
+  transition: transform .18s, box-shadow .22s;
 }
 .funding-banner:hover{
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(39,5,90,.16);
-  border-color: var(--vert);
+  box-shadow: 0 18px 44px rgba(0,0,0,.3);
 }
 .funding-label{
-  font-family: var(--body); font-style: italic; font-size: .95rem;
+  font-family: var(--body); font-style: italic; font-size: .9rem;
   color: var(--ink-soft); white-space: nowrap;
 }
-.funding-banner img{ height: 54px; width: auto; display: block; }
+.funding-banner img{ height: 40px; width: auto; display: block; }
 
 .hero-logos{
-  display: flex; flex-wrap: wrap; gap: 1.6rem 2.6rem;
+  display: flex; flex-wrap: wrap; gap: 1.4rem 3rem;
   align-items: center; justify-content: center;
-  padding-top: 2.4rem; border-top: 1px solid var(--line-light);
+  background: var(--white); border-radius: 18px;
+  padding: 1.8rem 2.6rem; margin: 0 auto; max-width: 820px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.22);
 }
 .hero-logos img{
-  height: 38px; width: auto; max-width: 130px; object-fit: contain;
-  filter: grayscale(1); opacity: .55; transition: filter .25s, opacity .25s;
+  height: 30px; width: auto; max-width: 100px; object-fit: contain;
+  opacity: .9; transition: opacity .2s, transform .2s;
 }
-.hero-logos img:hover{ filter: grayscale(0); opacity: 1; }
+.hero-logos img:hover{ opacity: 1; transform: translateY(-2px); }
 
 /* indicateur de défilement */
 .scroll-cue{
   display: inline-flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; margin-top: 2.4rem; border-radius: 50%;
-  border: 1.5px solid var(--line-light); color: var(--violet);
+  width: 44px; height: 44px; margin-top: 2.6rem; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.3); color: var(--white);
   text-decoration: none; animation: cue-bob 2.4s ease-in-out infinite;
   transition: background .2s, border-color .2s, color .2s;
 }
@@ -194,7 +196,13 @@ a:hover{ color: var(--vert); }
 .btn-primary{ background: var(--vert); color: #fff; border-color: var(--vert); font-weight: 600; }
 .btn-primary:hover{ background: var(--violet); border-color: var(--violet); color: #fff; box-shadow: 0 10px 26px rgba(82,181,101,.3); }
 .btn-outline{ background: transparent; color: var(--violet); border-color: var(--violet); }
-.btn-outline:hover{ background: var(--violet); color: #fff; box-shadow: 0 10px 26px rgba(39,5,90,.2); }
+.btn-outline:hover{ background: var(--violet); color: #fff; box-shadow: 0 10px 26px rgba(38,4,90,.2); }
+
+/* variantes sur fond violet (accueil) */
+.hero .btn-primary{ background: var(--vert); color: #fff; border-color: var(--vert); }
+.hero .btn-primary:hover{ background: var(--vert-sombre); border-color: var(--vert-sombre); box-shadow: 0 12px 30px rgba(73,178,94,.4); }
+.hero .btn-outline{ background: var(--white); color: var(--vert); border-color: var(--white); font-weight: 600; }
+.hero .btn-outline:hover{ background: var(--mauve); border-color: var(--mauve); color: var(--violet); box-shadow: 0 12px 30px rgba(176,129,245,.4); }
 
 /* ---------------- sections ---------------- */
 .section{ padding: 5rem 1.5rem; }
@@ -455,8 +463,10 @@ a:hover{ color: var(--vert); }
 @media (max-width: 720px){
   .section{ padding: 3.5rem 1.2rem; }
   .hero{ padding: 3.5rem 1.2rem 2.5rem; }
-  .funding-banner{ flex-direction: column; gap: .9rem; padding: 1.4rem 1.8rem; }
-  .funding-banner img{ height: 46px; }
+  .funding-banner{ flex-direction: column; gap: .9rem; padding: 1.2rem 1.6rem; }
+  .funding-banner img{ height: 36px; }
+  .hero-logos{ gap: 1.2rem 1.8rem; padding: 1.4rem 1.6rem; }
+  .hero-logos img{ height: 24px; max-width: 80px; }
   .convergence-grid, .axes-grid, .calendar-grid, .team-grid,
   .speakers-grid, .questions-grid, .programme-days, .pillars{ grid-template-columns: 1fr; }
   .comite-placeholder-grid{ grid-template-columns: repeat(2,1fr); }
