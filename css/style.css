@@ -86,6 +86,7 @@ a:hover{ color: var(--vert); }
 .nav-cta{
   border: 1px solid var(--fg) !important; color: var(--fg) !important;
   padding: 0.4em 0.9em !important; border-radius: 2px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .nav-cta:hover{ background: var(--fg); color: var(--bg) !important; }
 
@@ -126,18 +127,23 @@ a:hover{ color: var(--vert); }
 .btn{
   display: inline-block; padding: 0.75em 1.5em; border-radius: 999px;
   text-decoration: none; font-size: 0.95rem; border: 1px solid var(--fg);
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
+.btn:hover{ transform: translateY(-2px); }
+.btn:active{ transform: translateY(0); }
 .btn-lg{ padding: 1em 2em; font-size: 1.02rem; }
 .btn-primary{ background: var(--vert); color: var(--bg); border-color: var(--vert); font-weight: 600; }
-.btn-primary:hover{ background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.btn-primary:hover{ background: var(--fg); border-color: var(--fg); color: var(--bg); box-shadow: 0 10px 28px rgba(82,181,101,0.28); }
 .btn-ghost{ color: var(--fg); }
-.btn-ghost:hover{ background: var(--fg); color: var(--bg); }
+.btn-ghost:hover{ background: var(--fg); color: var(--bg); box-shadow: 0 10px 28px rgba(243,239,227,0.14); }
 
 .ars-badge{
   display: inline-flex; align-items: center; gap: 0.9rem;
   background: var(--white); border-radius: 999px; padding: 0.7em 1.6em 0.7em 1.1em;
   text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
+.ars-badge:hover{ transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
 .ars-badge-label{
   font-family: var(--serif-body); font-style: italic; font-size: 0.82rem; color: #444;
 }
