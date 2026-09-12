@@ -17,7 +17,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="#accueil" class="brand">
-      <img src="https://erer.re/wp-content/uploads/2026/03/ERER-color.svg" alt="ERER La Réunion" class="brand-logo">
+      <img src="images/logo-erer.png" alt="ERER La Réunion" class="brand-logo">
     </a>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-principale">
@@ -45,6 +45,7 @@
   <!-- 1. HERO -->
   <section id="accueil" class="hero">
     <div class="hero-inner">
+      <img src="images/logo-erer.png" alt="Espace de Réflexion Éthique de La Réunion" class="hero-logo-erer">
       <p class="hero-kicker">1<sup>er</sup> Colloque</p>
       <h1>Intelligence Artificielle<br>&amp; Santé</h1>
       <p class="hero-tagline">
@@ -59,15 +60,24 @@
         <a href="#thematique" class="btn btn-outline btn-lg">En savoir plus</a>
       </div>
 
+      <a href="https://www.lareunion.ars.sante.fr/" class="funding-banner" target="_blank" rel="noopener">
+        <span class="funding-label">Colloque financé par</span>
+        <img src="images/logo-ars-reunion.png" alt="Agence Régionale de Santé La Réunion">
+      </a>
+
       <div class="hero-logos">
-        <img src="https://erer.re/wp-content/uploads/2026/03/ERER-color.svg" alt="ERER La Réunion">
-        <img src="https://erer.re/wp-content/uploads/2026/06/logo-ARS.webp" alt="ARS La Réunion">
+        <img src="images/logo-erer.png" alt="ERER La Réunion">
+        <img src="images/logo-ars-reunion.png" alt="ARS La Réunion">
         <img src="https://erer.re/wp-content/uploads/2026/06/logo-UR.webp" alt="Université de La Réunion">
         <img src="https://erer.re/wp-content/uploads/2026/06/logo-FHF.webp" alt="FHF">
         <img src="https://erer.re/wp-content/uploads/2026/06/logo-FEHAP.webp" alt="FEHAP">
         <img src="https://erer.re/wp-content/uploads/2026/06/logo-FHP.webp" alt="FHP">
         <img src="https://erer.re/wp-content/uploads/2026/06/logo-FAS.webp" alt="FAS">
       </div>
+
+      <a href="#vision" class="scroll-cue" aria-label="Faire défiler vers le contenu">
+        <span class="picto picto-sm" style="--picto:url('images/icons/down-arrow.svg')"></span>
+      </a>
     </div>
   </section>
 
@@ -79,6 +89,7 @@
 
       <div class="vision-grid">
         <article class="vision-card">
+          <img src="images/icons/icon-006.svg" alt="" class="vision-picto">
           <span class="vision-num">01</span>
           <h3>La clinique avant le modèle</h3>
           <p>La recommandation algorithmique documente le jugement clinique ; elle ne s'y substitue pas.</p>
@@ -86,6 +97,7 @@
         </article>
 
         <article class="vision-card">
+          <img src="images/icons/icon-005.svg" alt="" class="vision-picto">
           <span class="vision-num">02</span>
           <h3>Un territoire qui compte</h3>
           <p>L'insularité, l'éloignement et le plurilinguisme ne sont pas des contraintes annexes à corriger.</p>
@@ -93,6 +105,7 @@
         </article>
 
         <article class="vision-card">
+          <img src="images/icons/icon-007.svg" alt="" class="vision-picto">
           <span class="vision-num">03</span>
           <h3>Une délibération publique</h3>
           <p>Ce que l'IA déplace dans le soin ne regarde pas que les soignants.</p>
@@ -155,14 +168,17 @@
         <h3 class="block-title">Le triptyque directeur</h3>
         <div class="pillars">
           <div class="pillar">
+            <span class="picto picto-lg" style="--picto:url('images/icons/icon-002.svg')"></span>
             <span class="pillar-name">Généraliser</span>
             <span class="pillar-desc">Ce que le modèle suppose</span>
           </div>
           <div class="pillar">
+            <span class="picto picto-lg" style="--picto:url('images/icons/icon-011.svg')"></span>
             <span class="pillar-name">Normaliser</span>
             <span class="pillar-desc">Ce que l'outil impose</span>
           </div>
           <div class="pillar">
+            <span class="picto picto-lg" style="--picto:url('images/icons/abstract.svg')"></span>
             <span class="pillar-name">Singulariser</span>
             <span class="pillar-desc">Ce que la clinique préserve</span>
           </div>
@@ -173,7 +189,7 @@
       <h3 class="block-title">Questions de recherche centrales</h3>
       <div class="questions-grid">
         <div class="question-cat">
-          <h4>Clinique &amp; décision</h4>
+          <h4><span class="picto picto-sm" style="--picto:url('images/icons/icon-004.svg')"></span>Clinique &amp; décision</h4>
           <ul class="quote-list">
             <li>« Comment documenter, plutôt que dissimuler, la part de délégation du jugement clinique à un système d'aide à la décision ? »</li>
             <li>« Que devient la responsabilité soignante lorsque la recommandation algorithmique précède l'examen ? »</li>
@@ -181,7 +197,7 @@
           </ul>
         </div>
         <div class="question-cat">
-          <h4>Territoire &amp; société</h4>
+          <h4><span class="picto picto-sm" style="--picto:url('images/icons/icon-003.svg')"></span>Territoire &amp; société</h4>
           <ul class="quote-list">
             <li>« L'insularité réunionnaise est-elle un obstacle à l'IA en santé, ou un terrain qui en révèle les angles morts ? »</li>
             <li>« Quelle place pour le créole et le plurilinguisme dans les interfaces de santé numérique ? »</li>
@@ -189,7 +205,7 @@
           </ul>
         </div>
         <div class="question-cat">
-          <h4>Technique &amp; gouvernance</h4>
+          <h4><span class="picto picto-sm" style="--picto:url('images/icons/icon-011.svg')"></span>Technique &amp; gouvernance</h4>
           <ul class="quote-list">
             <li>« Sur quelles données les modèles utilisés à La Réunion sont-ils entraînés — et qui, ici, y est représenté ? »</li>
             <li>« Que signifie une souveraineté numérique en santé pour un territoire ultramarin ? »</li>
@@ -197,7 +213,7 @@
           </ul>
         </div>
         <div class="question-cat">
-          <h4>Sciences humaines &amp; éthique</h4>
+          <h4><span class="picto picto-sm" style="--picto:url('images/icons/icon-009.svg')"></span>Sciences humaines &amp; éthique</h4>
           <ul class="quote-list">
             <li>« Le triptyque généraliser / normaliser / singulariser permet-il de dépasser l'opposition binaire pour ou contre l'IA en santé ? »</li>
             <li>« Quel rôle pour les épistémologies du Sud dans la critique des dispositifs numériques de soin ? »</li>
@@ -233,6 +249,7 @@
 
       <div class="programme-days">
         <article class="day-card">
+          <span class="picto picto-md" style="--picto:url('images/icons/icon-001.svg')"></span>
           <span class="day-tag">Journée 1</span>
           <h3>Professionnels de santé</h3>
           <ul class="day-list">
@@ -243,6 +260,7 @@
           </ul>
         </article>
         <article class="day-card">
+          <span class="picto picto-md" style="--picto:url('images/icons/abstract.svg')"></span>
           <span class="day-tag">Journée 2</span>
           <h3>Grand public</h3>
           <ul class="day-list">
@@ -513,8 +531,8 @@
 
 <footer class="site-footer">
   <div class="footer-logos">
-    <img src="https://erer.re/wp-content/uploads/2026/03/ERER-color.svg" alt="ERER La Réunion">
-    <img src="https://erer.re/wp-content/uploads/2026/06/logo-ARS.webp" alt="ARS La Réunion">
+    <img src="images/logo-erer.png" alt="ERER La Réunion">
+    <img src="images/logo-ars-reunion.png" alt="ARS La Réunion">
     <img src="https://erer.re/wp-content/uploads/2026/06/logo-UR.webp" alt="Université de La Réunion">
     <img src="https://erer.re/wp-content/uploads/2026/06/logo-FHF.webp" alt="FHF">
     <img src="https://erer.re/wp-content/uploads/2026/06/logo-FEHAP.webp" alt="FEHAP">

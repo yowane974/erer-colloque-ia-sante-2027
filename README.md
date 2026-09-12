@@ -21,6 +21,7 @@ d'organisation.
 index.html      page unique
 css/style.css   charte ERER (vert, violet, mauve, bleu)
 js/script.js    menu mobile
+images/         logos hébergés dans le dépôt
 documents/      PDF à déposer (programme, actes)
 ```
 
@@ -57,14 +58,34 @@ Deux blocs sont en place mais vides, en attente de contenu réel :
   numérotées vides, à compléter au format : Auteur·es. Titre. Revue, année,
   volume, pages. DOI.
 
-## Logos
+## Logos et pictogrammes
 
-Les logos (ERER, ARS, FHF, FEHAP, FHP, FAS, Université de La Réunion) sont
-actuellement chargés directement depuis erer.re (hotlink), faute d'accès
-réseau à ce domaine depuis l'environnement où ce site a été généré. Pour la
-mise en production, il est préférable de télécharger ces fichiers et de les
-héberger dans un dossier `images/logos/` du dépôt, pour ne pas dépendre de
-la disponibilité du site erer.re.
+Hébergés dans le dépôt : le logo ERER (`images/logo-erer.png`), le logo ARS
+(`images/logo-ars-reunion.png`) et les pictogrammes de la charte ERER
+(`images/icons/`).
+
+Les logos des signataires de la convention (FHF, FEHAP, FHP, FAS, Université
+de La Réunion) sont encore chargés depuis erer.re. Pour la mise en
+production, mieux vaut les télécharger et les placer eux aussi dans
+`images/`, pour ne pas dépendre de la disponibilité du site erer.re.
+
+### Utiliser les pictogrammes
+
+Les pictogrammes monochromes sont appliqués en masque CSS, ce qui leur fait
+prendre la couleur du texte environnant :
+
+```html
+<span class="picto picto-md" style="--picto:url('images/icons/icon-004.svg')"></span>
+```
+
+Tailles disponibles : `picto-sm` (20px), `picto-md` (34px), `picto-lg` (48px).
+Les pictogrammes déjà multicolores (icon-005 à icon-008) sont insérés
+directement en `<img>` pour conserver leurs couleurs d'origine.
+
+### Palette
+
+Couleurs extraites des fichiers de marque fournis : vert `#49B25E`, violet
+`#26045A`, mauve `#B081F5`, bleu `#7498F6`.
 
 ## Prochaines mises à jour prévues
 

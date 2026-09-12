@@ -8,12 +8,13 @@
    ========================================================= */
 
 :root{
-  --vert: #52B565;
-  --vert-sombre: #3E9350;
-  --violet: #27055A;
+  /* Couleurs extraites des fichiers de marque ERER fournis */
+  --vert: #49B25E;
+  --vert-sombre: #3A8F4C;
+  --violet: #26045A;
   --violet-clair: #3D1580;
   --mauve: #B081F5;
-  --bleu: #3F4E79;
+  --bleu: #7498F6;
   --white: #FFFFFF;
 
   --ink: #1E1B2E;
@@ -91,6 +92,19 @@ a:hover{ color: var(--vert); }
 .nav-toggle{ display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: .5rem; }
 .nav-toggle span{ width: 22px; height: 1.8px; background: var(--violet); display: block; }
 
+/* ---------------- pictos de marque ---------------- */
+/* Les pictos monochromes sont appliqués en masque CSS pour prendre
+   les couleurs de la charte ; les pictos multicolores restent en <img>. */
+.picto{
+  display: inline-block; flex: 0 0 auto;
+  background-color: currentColor;
+  -webkit-mask: var(--picto) no-repeat center / contain;
+  mask: var(--picto) no-repeat center / contain;
+}
+.picto-sm{ width: 20px; height: 20px; }
+.picto-md{ width: 34px; height: 34px; }
+.picto-lg{ width: 48px; height: 48px; }
+
 /* ---------------- hero ---------------- */
 .hero{
   background: var(--white);
@@ -99,6 +113,9 @@ a:hover{ color: var(--vert); }
   border-bottom: 1px solid var(--line-light);
 }
 .hero-inner{ max-width: 900px; margin: 0 auto; }
+.hero-logo-erer{
+  height: 74px; width: auto; display: block; margin: 0 auto 2.2rem;
+}
 .hero-kicker{
   font-family: var(--body); font-style: italic; color: var(--vert);
   font-size: 1rem; margin: 0 0 1rem; letter-spacing: .02em;
@@ -117,7 +134,27 @@ a:hover{ color: var(--vert); }
 }
 .hero-place{ font-size: .98rem; color: var(--ink-soft); margin: 0 0 2.4rem; }
 
-.hero-actions{ display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.hero-actions{ display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.6rem; }
+
+/* bandeau de financement ARS */
+.funding-banner{
+  display: inline-flex; align-items: center; gap: 1.6rem;
+  background: var(--white); border: 1.5px solid var(--line-light);
+  border-radius: 14px; padding: 1.1rem 2.2rem;
+  text-decoration: none; margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(39,5,90,.1);
+  transition: transform .18s, box-shadow .22s, border-color .22s;
+}
+.funding-banner:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(39,5,90,.16);
+  border-color: var(--vert);
+}
+.funding-label{
+  font-family: var(--body); font-style: italic; font-size: .95rem;
+  color: var(--ink-soft); white-space: nowrap;
+}
+.funding-banner img{ height: 54px; width: auto; display: block; }
 
 .hero-logos{
   display: flex; flex-wrap: wrap; gap: 1.6rem 2.6rem;
@@ -129,6 +166,21 @@ a:hover{ color: var(--vert); }
   filter: grayscale(1); opacity: .55; transition: filter .25s, opacity .25s;
 }
 .hero-logos img:hover{ filter: grayscale(0); opacity: 1; }
+
+/* indicateur de défilement */
+.scroll-cue{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; margin-top: 2.4rem; border-radius: 50%;
+  border: 1.5px solid var(--line-light); color: var(--violet);
+  text-decoration: none; animation: cue-bob 2.4s ease-in-out infinite;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.scroll-cue:hover{ background: var(--vert); border-color: var(--vert); color: #fff; }
+@keyframes cue-bob{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(5px); }
+}
+@media (prefers-reduced-motion: reduce){ .scroll-cue{ animation: none; } }
 
 /* ---------------- buttons ---------------- */
 .btn{
@@ -170,6 +222,7 @@ a:hover{ color: var(--vert); }
 /* ---------------- vision ---------------- */
 .vision-grid{ display: grid; grid-template-columns: repeat(3,1fr); gap: 2.4rem; }
 .vision-card{ border-top: 3px solid var(--vert); padding-top: 1.4rem; }
+.vision-picto{ width: 52px; height: 52px; display: block; margin-bottom: 1rem; }
 .vision-num{
   display: block; font-family: var(--display); font-size: 2.2rem;
   color: var(--mauve); line-height: 1; margin-bottom: .7rem;
@@ -204,13 +257,16 @@ a:hover{ color: var(--vert); }
 .pillar{
   text-align: center; padding: 1.6rem 1rem; background: var(--dark-card);
   border-radius: 6px; border-top: 3px solid var(--vert);
+  display: flex; flex-direction: column; align-items: center;
 }
+.pillar .picto{ color: var(--vert); margin-bottom: .9rem; }
 .pillar-name{ display: block; font-family: var(--display); font-size: 1.2rem; color: var(--dark-fg); margin-bottom: .4rem; }
 .pillar-desc{ display: block; font-size: .86rem; color: var(--dark-fg-soft); font-style: italic; }
 .framework-note{ margin: 1.2rem 0 0; font-size: .85rem; font-style: italic; color: var(--mauve); text-align: right; }
 
 .questions-grid{ display: grid; grid-template-columns: repeat(2,1fr); gap: 2.2rem 2.6rem; }
 .question-cat h4{
+  display: flex; align-items: center; gap: .6rem;
   font-size: 1.05rem; color: var(--mauve); margin-bottom: 1rem;
   padding-bottom: .6rem; border-bottom: 1px solid var(--line-dark);
 }
@@ -240,6 +296,7 @@ a:hover{ color: var(--vert); }
   background: var(--paper-alt); border-radius: 8px; padding: 2rem;
   border-top: 3px solid var(--vert);
 }
+.day-card .picto{ color: var(--vert); margin-bottom: .8rem; }
 .day-tag{
   display: inline-block; font-size: .78rem; font-style: italic; color: var(--vert);
   margin-bottom: .5rem;
@@ -398,6 +455,8 @@ a:hover{ color: var(--vert); }
 @media (max-width: 720px){
   .section{ padding: 3.5rem 1.2rem; }
   .hero{ padding: 3.5rem 1.2rem 2.5rem; }
+  .funding-banner{ flex-direction: column; gap: .9rem; padding: 1.4rem 1.8rem; }
+  .funding-banner img{ height: 46px; }
   .convergence-grid, .axes-grid, .calendar-grid, .team-grid,
   .speakers-grid, .questions-grid, .programme-days, .pillars{ grid-template-columns: 1fr; }
   .comite-placeholder-grid{ grid-template-columns: repeat(2,1fr); }
