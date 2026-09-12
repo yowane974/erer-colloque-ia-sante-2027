@@ -66,9 +66,13 @@
           </div>
         </div>
         <div class="hero-actions">
-          <a href="#appel" class="btn btn-primary">Consulter l'appel à communication</a>
-          <a href="#contact" class="btn btn-ghost">Être tenu·e informé·e</a>
+          <a href="#appel" class="btn btn-primary btn-lg">Proposer une communication</a>
+          <a href="#thematique" class="btn btn-ghost btn-lg">En savoir plus</a>
         </div>
+        <a href="https://www.lareunion.ars.sante.fr/" class="ars-badge" target="_blank" rel="noopener">
+          <span class="ars-badge-label">Financé par</span>
+          <img src="https://erer.re/wp-content/uploads/2026/06/logo-ARS.webp" alt="ARS La Réunion">
+        </a>
       </div>
 
       <div class="hero-figure" aria-hidden="true">
@@ -459,10 +463,39 @@
           <p class="meta-value">À préciser</p>
         </div>
         <div>
-          <span class="meta-label">Contact</span>
-          <p class="meta-value"><a href="mailto:erer.reunion@chu-reunion.fr">erer.reunion@chu-reunion.fr</a> <em>(à confirmer)</em></p>
+          <span class="meta-label">Contact direct</span>
+          <p class="meta-value"><a href="mailto:contact@erer.re">contact@erer.re</a></p>
         </div>
       </div>
+
+      <form class="contact-form" action="https://formsubmit.co/contact@erer.re" method="POST">
+        <input type="hidden" name="_subject" value="Nouveau message — site Colloque IA & Santé">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="true">
+        <div class="form-row">
+          <label for="cf-name">Nom &amp; prénom</label>
+          <input type="text" id="cf-name" name="Nom" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Adresse e-mail</label>
+          <input type="email" id="cf-email" name="_replyto" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-subject">Objet</label>
+          <select id="cf-subject" name="Objet">
+            <option>Proposition de communication</option>
+            <option>Inscription</option>
+            <option>Partenariat</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+        <p class="form-note">Envoi direct à contact@erer.re, sans ouvrir votre messagerie.</p>
+      </form>
     </div>
   </section>
 
