@@ -44,6 +44,15 @@ git push -u origin main
 Pour l'héberger gratuitement via GitHub Pages : Settings → Pages →
 Deploy from branch → `main` / `/ (root)`.
 
+## Logos
+
+Les logos (ERER, ARS, FHF, FEHAP, FHP, FAS, Université de La Réunion) sont
+actuellement chargés directement depuis erer.re (hotlink), faute d'accès
+réseau à ce domaine depuis l'environnement où ce site a été généré. Pour la
+mise en production, il est préférable de télécharger ces fichiers et de les
+héberger dans un dossier `images/logos/` du dépôt, pour ne pas dépendre de
+la disponibilité du site erer.re.
+
 ## Prochaines mises à jour prévues
 
 - Dates précises (appel, deadlines, colloque)
