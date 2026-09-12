@@ -19,8 +19,9 @@ d'organisation.
 
 ```
 index.html      page unique
-css/style.css   identité visuelle (palette basalte / molasse / lagon)
+css/style.css   charte ERER (vert, violet, mauve, bleu)
 js/script.js    menu mobile
+documents/      PDF à déposer (programme, actes)
 ```
 
 Aucune dépendance de build : le site s'ouvre tel quel dans un navigateur,
@@ -44,20 +45,17 @@ git push -u origin main
 Pour l'héberger gratuitement via GitHub Pages : Settings → Pages →
 Deploy from branch → `main` / `/ (root)`.
 
-## Formulaire de contact
+## Structures prêtes à remplir
 
-Le formulaire envoie directement vers `contact@erer.re` via
-[formsubmit.co](https://formsubmit.co) (gratuit, sans backend à héberger).
+Deux blocs sont en place mais vides, en attente de contenu réel :
 
-**Étape obligatoire avant que ça fonctionne** : la toute première fois que
-quelqu'un soumet le formulaire, formsubmit.co envoie un e-mail de
-confirmation à `contact@erer.re` — il faut cliquer sur le lien qu'il
-contient pour activer l'envoi. Sans ça, les messages suivants ne partiront
-pas. Le plus simple est de faire toi-même un envoi test une fois le site en
-ligne, et de confirmer via cet e-mail.
-
-Un captcha simple (case à cocher) est ajouté automatiquement par
-formsubmit.co pour limiter le spam.
+- **Programme PDF** — le visionneur intégré et les boutons
+  consulter/télécharger sont écrits dans `index.html` mais mis en
+  commentaire. Voir `documents/README.md` pour les activer une fois le
+  programme validé.
+- **Références scientifiques** — section `#references` avec cinq entrées
+  numérotées vides, à compléter au format : Auteur·es. Titre. Revue, année,
+  volume, pages. DOI.
 
 ## Logos
 
