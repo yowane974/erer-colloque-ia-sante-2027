@@ -7,13 +7,11 @@ Contact.
 
 ## Contenu actuel
 
-Le contenu factuel déjà connu a été intégré : lieu (Musée Stella
-Matutina), format en deux journées, triptyque généraliser / normaliser /
-singulariser, axe transversal environnemental, coordination (Yohan
-Mauve). Tout le reste est marqué explicitement comme provisoire
-(« à confirmer », « en cours de constitution ») plutôt que rempli de
-texte inventé — à mettre à jour au fil de l'avancement du comité
-d'organisation.
+Le contenu de fond (thématique, triptyque généraliser/normaliser/singulariser,
+enjeux, questions de recherche, axes, références) provient du rationnel
+scientifique du colloque. Les éléments encore indéterminés — dates précises,
+comité scientifique, intervenant·es, frais de participation — sont marqués
+explicitement comme provisoires plutôt que remplis de texte inventé.
 
 ## Structure
 

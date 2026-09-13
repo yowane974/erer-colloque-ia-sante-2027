@@ -260,6 +260,26 @@ a:hover{ color: var(--vert); }
 .conv-card p{ margin: 0; font-size: .85rem; color: var(--dark-fg-soft); }
 
 .framework-block{ margin-top: 3.4rem; padding: 2.2rem; background: var(--dark-bg-alt); border-radius: 8px; }
+
+/* séquence de déploiement */
+.sequence-block{ margin-top: 3.4rem; padding: 2.2rem; background: var(--dark-bg-alt); border-radius: 8px; }
+.sequence-block .block-title{ margin-top: 0; }
+.sequence{
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem;
+}
+.sequence li{
+  display: flex; align-items: center; gap: .9rem; position: relative;
+  background: var(--dark-card); border-radius: 6px; padding: 1.1rem 1.2rem;
+  border-left: 3px solid var(--vert);
+}
+.seq-num{
+  flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--vert); color: #fff; display: flex;
+  align-items: center; justify-content: center;
+  font-family: var(--display); font-size: .95rem; font-weight: 600;
+}
+.seq-label{ font-size: .88rem; color: var(--dark-fg); line-height: 1.35; }
 .framework-block .block-title{ margin-top: 0; }
 .pillars{ display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
 .pillar{
@@ -269,7 +289,7 @@ a:hover{ color: var(--vert); }
 }
 .pillar .picto{ color: var(--vert); margin-bottom: .9rem; }
 .pillar-name{ display: block; font-family: var(--display); font-size: 1.2rem; color: var(--dark-fg); margin-bottom: .4rem; }
-.pillar-desc{ display: block; font-size: .86rem; color: var(--dark-fg-soft); font-style: italic; }
+.pillar-desc{ display: block; font-size: .85rem; color: var(--dark-fg-soft); font-style: italic; line-height: 1.45; }
 .framework-note{ margin: 1.2rem 0 0; font-size: .85rem; font-style: italic; color: var(--mauve); text-align: right; }
 
 .questions-grid{ display: grid; grid-template-columns: repeat(2,1fr); gap: 2.2rem 2.6rem; }
@@ -450,6 +470,7 @@ a:hover{ color: var(--vert); }
 /* ---------------- responsive ---------------- */
 @media (max-width: 1000px){
   .convergence-grid, .axes-grid{ grid-template-columns: repeat(2,1fr); }
+  .sequence{ grid-template-columns: repeat(2,1fr); }
   .calendar-grid{ grid-template-columns: repeat(2,1fr); }
   .team-grid{ grid-template-columns: repeat(2,1fr); }
   .comite-placeholder-grid{ grid-template-columns: repeat(3,1fr); }
@@ -468,7 +489,8 @@ a:hover{ color: var(--vert); }
   .hero-logos{ gap: 1.2rem 1.8rem; padding: 1.4rem 1.6rem; }
   .hero-logos img{ height: 24px; max-width: 80px; }
   .convergence-grid, .axes-grid, .calendar-grid, .team-grid,
-  .speakers-grid, .questions-grid, .programme-days, .pillars{ grid-template-columns: 1fr; }
+  .speakers-grid, .questions-grid, .programme-days, .pillars,
+  .sequence{ grid-template-columns: 1fr; }
   .comite-placeholder-grid{ grid-template-columns: repeat(2,1fr); }
   .stats-row{ gap: 2rem; }
 
