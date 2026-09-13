@@ -1,0 +1,14 @@
+{
+  "name": "Colloque IA & Santé 2027 — ERER La Réunion",
+  "short_name": "Colloque IA & Santé",
+  "description": "1er Colloque Intelligence Artificielle & Santé de l'ERER La Réunion, mars 2027 au Musée Stella Matutina.",
+  "lang": "fr",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#26045A",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -80,6 +80,18 @@ Tailles disponibles : `picto-sm` (20px), `picto-md` (34px), `picto-lg` (48px).
 Les pictogrammes déjà multicolores (icon-005 à icon-008) sont insérés
 directement en `<img>` pour conserver leurs couleurs d'origine.
 
+### Favicon et icônes
+
+Générés à partir de la marque ERER (carré à quatre quadrants) :
+`favicon.ico` à la racine, `images/favicon-16x16.png`,
+`images/favicon-32x32.png`, `images/favicon-96x96.png`,
+`images/apple-touch-icon.png` (fond blanc, iOS ne gère pas la
+transparence) et `images/icon-192.png` / `images/icon-512.png` pour le
+manifeste `site.webmanifest`.
+
+Pour les régénérer après un changement de logo, repartir de
+`images/logo-erer-marque.png` (marque détourée, fond transparent).
+
 ### Palette
 
 Couleurs extraites des fichiers de marque fournis : vert `#49B25E`, violet
