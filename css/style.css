@@ -64,9 +64,8 @@ a:hover{ color: var(--vert); }
 /* ---------------- header ---------------- */
 .site-header{
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,0.94);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line-light);
+  background: var(--violet);
+  box-shadow: 0 2px 16px rgba(0,0,0,.18);
 }
 .header-inner{
   max-width: var(--max-w); margin: 0 auto;
@@ -74,23 +73,23 @@ a:hover{ color: var(--vert); }
   padding: 0.85rem 1.5rem;
 }
 .brand{ display: flex; align-items: center; text-decoration: none; }
-.brand-logo{ height: 32px; width: auto; display: block; }
+.brand-logo{ height: 32px; width: auto; display: block; filter: brightness(0) invert(1); }
 
 .site-nav{ display: flex; align-items: center; gap: 1.4rem; }
 .site-nav a{
-  color: var(--ink-soft); text-decoration: none; font-size: 0.9rem;
+  color: rgba(255,255,255,.82); text-decoration: none; font-size: 0.9rem;
   border-bottom: 1.5px solid transparent; padding-bottom: 2px; transition: color .2s, border-color .2s;
 }
-.site-nav a:hover{ color: var(--vert); border-color: var(--vert); }
+.site-nav a:hover{ color: var(--white); border-color: var(--vert); }
 .nav-cta{
   background: var(--vert); color: #fff !important; border: none !important;
   padding: 0.5em 1.1em !important; border-radius: 999px; font-weight: 600;
   transition: background .2s, transform .15s, box-shadow .2s;
 }
-.nav-cta:hover{ background: var(--violet); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(39,5,90,.22); }
+.nav-cta:hover{ background: var(--white); color: var(--violet) !important; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.28); }
 
 .nav-toggle{ display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: .5rem; }
-.nav-toggle span{ width: 22px; height: 1.8px; background: var(--violet); display: block; }
+.nav-toggle span{ width: 22px; height: 1.8px; background: var(--white); display: block; }
 
 /* ---------------- pictos de marque ---------------- */
 /* Les pictos monochromes sont appliqués en masque CSS pour prendre
@@ -108,7 +107,7 @@ a:hover{ color: var(--vert); }
 /* ---------------- hero ---------------- */
 .hero{
   background: var(--violet);
-  padding: 4.5rem 1.5rem 3.5rem;
+  padding: 3.2rem 1.5rem 3.5rem;
   text-align: center;
   color: var(--white);
 }
@@ -497,8 +496,8 @@ a:hover{ color: var(--vert); }
   .nav-toggle{ display: flex; }
   .site-nav{
     position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--white); flex-direction: column; align-items: flex-start;
-    padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid var(--line-light);
+    background: var(--violet); flex-direction: column; align-items: flex-start;
+    padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.14);
     display: none; gap: 1rem;
   }
   .site-nav.open{ display: flex; }
