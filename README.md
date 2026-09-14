@@ -18,8 +18,9 @@ explicitement comme provisoires plutôt que remplis de texte inventé.
 ```
 index.html      page unique
 css/style.css   charte ERER (vert, violet, mauve, bleu)
-js/script.js    menu mobile
-images/         logos hébergés dans le dépôt
+js/script.js    menu mobile, ombre du header, apparition au défilement,
+                surlignage de la section active
+images/         logos, pictogrammes et favicons
 documents/      PDF à déposer (programme, actes)
 ```
 
